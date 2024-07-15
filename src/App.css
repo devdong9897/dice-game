@@ -1,3 +1,9 @@
 .App .App-button {
   margin: 6px;
 }
+
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

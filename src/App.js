@@ -25,13 +25,16 @@ function App() {
 
   return (
     <div className="App">
-      <Button className="App-button" color="blue" onClick={handleRollClick}>
-        던지기
-      </Button>
-      <Button className="App-button" color="red" onClick={handleClearClick}>
-        처음부터
-      </Button>
+      <h1>주사위 게임</h1>
       <div>
+        <Button className="App-button" color="blue" onClick={handleRollClick}>
+          던지기
+        </Button>
+        <Button className="App-button" color="red" onClick={handleClearClick}>
+          처음부터
+        </Button>
+      </div>
+      <div className="game">
         <Board name="나" color="blue" gameHistory={myHistory} />
         <Board name="상대" color="red" gameHistory={otherHistory} />
       </div>
