@@ -1,6 +1,12 @@
 import Dice from "./Dice";
 
-function Board({ name, color, num, sum, gameHistory }) {
+function Board({ name, color, gameHistory }) {
+  // gameHistory 배열에서 마지막으로 나온(length뒤에 - 1) 주사위 숫자를 가져온다.
+  // 만약 gameHistory가 비어 있다면(주사위를 아직 던지지 않았다면), 기본값으로 1을 사용.
+  const num = gameHistory[gameHistory.length - 1] || 1;
+  // gameHistory 배열의 모든 숫자를 더해서 총점을 계산한다.
+  // 배열이 비어 있으면, 총점은 0이다.
+  const sum = gameHistory.reduce((a, b) => a + b, 0);
   return (
     <div>
       <h1>{name}</h1>
